@@ -1,10 +1,4 @@
 tmp/
 score_sde.egg-info/
 results/
-__pycache__/
-context_generator/models/__pycache__/
-context_generator/datasets/__pycache__/*
-context_generator/modules/common/__pycache__/
-context_generator/modules/encoders/__pycache__/
-context_generator/modules/model/__pycache__/
-context_generator/utils/__pycache__/
+**/__pycache__/
