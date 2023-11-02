@@ -5,7 +5,6 @@ RUN wget -qnc https://github.com/conda-forge/miniforge/releases/latest/download/
 RUN bash Mambaforge-Linux-x86_64.sh -bfp /usr/local
 RUN mamba config --set auto_update_conda false
 RUN mamba create -n DiffAffinity -y -c conda-forge python=3.9
-#COPY . /tmp/DiffAffinity
 WORKDIR /tmp/
 RUN git clone -b dev https://github.com/engelberger/DiffAffinity.git
 WORKDIR /tmp/DiffAffinity

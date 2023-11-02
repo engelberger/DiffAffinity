@@ -44,7 +44,7 @@ The `data` folder contains the data for downstream experiments.
 | [7FAE_RBD_Fv.pdb](./data/7FAE_RBD_Fv.pdb) | Protein experimental structure of  the SARS-CoV-2 virus spike protein (pid: 7FAE)|
 
 ## Trained Weights
-Trained model weights are available here [Google Driver](https://drive.google.com/drive/folders/1NmKl-mLVgwBP7IVwX6BkJ2mB5xIYjRKB?usp=sharing) 
+Trained model weights are available here [Google Drive](https://drive.google.com/drive/folders/1NmKl-mLVgwBP7IVwX6BkJ2mB5xIYjRKB?usp=sharing) 
 
 ```bash
 pip install gdown
