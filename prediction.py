@@ -38,6 +38,12 @@ from context_generator.utils.skempi import eval_skempi
 
 rng = jax.random.PRNGKey(42)
 
+unified_memory = True #@param {type:"boolean"}
+import os, time, gc
+if unified_memory:
+  ENV = {"TF_FORCE_UNIFIED_MEMORY":"1", "XLA_PYTHON_CLIENT_MEM_FRACTION":"4.0"}
+  for k,v in ENV.items(): os.environ[k] = v
+
 class Freezable_TrainState(NamedTuple):
     trainable_params: hk.Params
     non_trainable_params: hk.Params

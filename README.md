@@ -46,6 +46,15 @@ The `data` folder contains the data for downstream experiments.
 ## Trained Weights
 Trained model weights are available here [Google Driver](https://drive.google.com/drive/folders/1NmKl-mLVgwBP7IVwX6BkJ2mB5xIYjRKB?usp=sharing) 
 
+```bash
+pip install gdown
+mkdir tmp 
+cd tmp
+mkdir checkpoint
+cd checkpoint
+gdown --folder 1NmKl-mLVgwBP7IVwX6BkJ2mB5xIYjRKB
+```
+
 ## Usage
 
 ### Train Side-chain Diffusion Probabilistic Model SidechainDiff
@@ -66,7 +75,7 @@ Sample results of torsion angles can be found in `workdir`.
 ### Train Mutational Effect Predictor DiffAffinity 
 
 ```bash
-python DiffAffinity.py ./context_generator/configs/train/da_ddg_skempi.yml --idx_cvfolds 0
+/usr/local/envs/DiffAffinity/bin/python DiffAffinity.py ./context_generator/configs/train/da_ddg_skempi.yml --idx_cvfolds 0
 ```
 The `--idx_cvfolds` is optional (0,1,2) and the default setting is 0
 
@@ -74,13 +83,13 @@ Because we have three DiffAffinity models, you need to change the checkpoint in 
 
 ### Predicting Mutational Effects On Binding Affinity of SARS-CoV-2 RBD
 ```bash 
-python prediction.py ./context_generator/configs/inference/6m0j.yml
+/usr/local/envs/DiffAffinity/bin/python prediction.py ./context_generator/configs/inference/6m0j.yml
 ```
 
 ### Predict Mutational Effects for a SARS-CoV-2 Human Antibody and Other Protein Complexes
 
 ```bash
-python prediction.py ./context_generator/configs/inference/7FAE_RBD_Fv_mutation.yml
+/usr/local/envs/DiffAffinity/bin/python prediction.py ./context_generator/configs/inference/7FAE_RBD_Fv_mutation.yml
 ```
 
 # Acknowledgements
